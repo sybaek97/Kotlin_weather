@@ -32,7 +32,7 @@ class GeoPointConverter {
     private val slat2=SLAT2*DEGRAD
     private val olon = OLON * DEGRAD
     private val olat = OLAT * DEGRAD
-
+    data class Point(val nx: Int, val ny: Int)
     fun convert(lon: Double, lat: Double): Point {
 
         var sn = tan(PI * 0.25 + slat2 * 0.5) / tan(PI * 0.25 + slat1 * 0.5)
